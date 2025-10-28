@@ -43,7 +43,7 @@
 </section>
 
 <section id="partners">
-  <h2 data-i18n="partners.title">Nos Partenaires</h2>
+  <h2 data-i18n="partners.title">Partenaires</h2>
   <p data-i18n="partners.text">SelMiles est fière de collaborer avec des leaders de la logistique.</p>
   <div class="partner-logo-container">
     <a href="https://logidoo.co/home" target="_blank">
@@ -97,20 +97,19 @@
 </section>
 
 <section id="contact">
-  <h2 data-i18n="contact.title">Contact</h2>
-    <div class="contact-form">
-    <input type="text" placeholder="Nom" name="name" required>
-    <input type="email" placeholder="Email" name="email" required>
-    <textarea placeholder="Votre question ou type de produits, volume, destinations..." name="message" required></textarea>
-        <button type="submit" class="btn-primary-submit" data-i18n="contact.send_button" onclick="alert('Merci ! Votre message a été envoyé.')">Envoyer</button>
-  </div>
-  <p>
+  <h2 data-i18n="contact.title">Contact</h2>
+  <div class="contact-form">
+    <input type="text" placeholder="Nom" name="name" required>
+    <input type="email" placeholder="Email" name="email" required>
+    <textarea data-i18n-placeholder="contact.message_placeholder" name="message" required></textarea>
+    <button type="submit" class="btn-primary-submit" data-i18n="contact.send_button" onclick="alert(translations[localStorage.getItem('lang') || 'fr']['contact.message_sent'])">Envoyer</button>
+  </div>
+  <p>
     <a href="mailto:contact.selmacs@gmail.com" class="email-link">
         <span data-i18n="contact.email_text">✉️ Envoyer un email</span>
     </a>
   </p>
 </section>
-
 <footer>
   <p class="copyright-text">© 2025 SelMiles. Tous droits réservés.</p>
   <div class="footer-logos">
@@ -128,7 +127,7 @@ const translations = {
     "about.title":"À propos",
     "about.text":"SelMiles est un service 3PL (logistique tierce partie) basé en France; aidant les e-commerçants et fournisseurs locaux et internationaux à gérer le stockage, la préparation et l’expédition de leurs produits vers la France et l’Europe.",
     "about.mention":"SelMiles est un service 3PL fondé par Selma SAIDI, entrepreneuse basée en France.", 
-    "partners.title":"Nos Partenaires", // Texte corrigé
+    "partners.title":"Partenaires", // Texte corrigé
     "partners.text":"SelMiles est fière de collaborer avec des leaders de la logistique.", 
     "services.title":"Services",
     "services.receive.front":"<span class='card-icon'>✅</span> Réception & contrôle des marchandises",
@@ -147,7 +146,9 @@ const translations = {
     "advantages.support":"<span class='card-icon'>⚙️</span> Support client personnalisé", 
     "contact.title":"Contact",
     "contact.email_text":"✉️ Envoyer un email", 
-    "contact.send_button": "Envoyer"
+    "contact.send_button": "Envoyer",
+    "contact.message_placeholder": "Votre question ou type de produits, volume, destinations...",
+    "contact.message_sent": "Merci ! Votre message a été envoyé."
   },
   en: {
     "hero.title":"SELling made simple — no matter the Miles.", 
@@ -156,7 +157,7 @@ const translations = {
     "about.title":"About",
     "about.text":"SelMiles is a 3PL (Third Party Logistics) service based in France- aiming to help e-commerce sellers and international suppliers manage storage, fulfillment, and shipping to France and Europe.",
     "about.mention":"SelMiles is a 3PL founded by Selma SAIDI, a woman entrepreneur based in France.",
-    "partners.title":"Our Partners", // Texte corrigé
+    "partners.title":"Partners", // Texte corrigé
     "partners.text":"SelMiles proudly partners with logistics leaders.", 
     "services.title":"Services",
     "services.receive.front":"<span class='card-icon'>✅</span> Receiving & Quality Check",
@@ -175,7 +176,10 @@ const translations = {
     "advantages.support":"<span class='card-icon'>⚙️</span> Personalised client support", 
     "contact.title":"Contact",
     "contact.email_text":"✉️ Send an email", 
-    "contact.send_button": "Send"
+    "contact.send_button": "Send",
+    "contact.message_placeholder": "Your question or product type, volume, destinations...",
+    "contact.message_sent": "Thank you! Your message has been sent."
+},
   },
   cn: {
     "hero.title":"销售从未如此简单，无惧万里之遥。", 
@@ -184,7 +188,7 @@ const translations = {
     "about.title":"关于",
     "about.text":"SelMiles 是一家位于法国的第三方物流 (3PL) 服务，帮助电商卖家和国际供应商管理仓储、订单履行和向法国及欧洲的运输。",
     "about.mention":"SelMiles 是由 Selma SAIDI 创立的 3PL，公司由女性企业家拥有，总部位于法国。",
-    "partners.title":"我们的合作伙伴", // Texte corrigé
+    "partners.title":"合作伙伴", // Texte corrigé
     "partners.text":"SelMiles 很荣幸能与物流领军企业合作。", 
     "services.title":"服务",
     "services.receive.front":"<span class='card-icon'>✅</span> 收货及质检",
@@ -203,7 +207,10 @@ const translations = {
     "advantages.support":"<span class='card-icon'>⚙️</span> 个性化客户支持", 
     "contact.title":"联系",
     "contact.email_text":"✉️ 发送邮件", 
-    "contact.send_button": "发送"
+    "contact.send_button": "发送",
+    "contact.message_placeholder": "您的问题或产品类型、数量、目的地...",
+    "contact.message_sent": "谢谢！您的信息已发送。"
+},
   }
 };
 
@@ -223,7 +230,8 @@ function applyLang(lang){
 
   document.querySelector('.btn-primary').textContent = translations[lang]["hero.cta"];
   document.querySelector('.btn-primary-submit').textContent = translations[lang]["contact.send_button"];
-  document.querySelector('.email-link span').innerHTML = translations[lang]["contact.email_text"]; 
+  document.querySelector('.email-link span').innerHTML = translations[lang]["contact.email_text"];
+  document.querySelector('[data-i18n-placeholder]').placeholder = translations[lang]["contact.message_placeholder"];
   localStorage.setItem('lang', lang);
 }
 applyLang(localStorage.getItem('lang') || 'fr');
