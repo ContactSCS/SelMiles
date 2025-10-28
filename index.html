@@ -97,19 +97,20 @@
 </section>
 
 <section id="contact">
-  <h2 data-i18n="contact.title">Contact</h2>
-  <div class="contact-form">
-    <input type="text" placeholder="Nom" name="name" required>
-    <input type="email" placeholder="Email" name="email" required>
-    <textarea data-i18n-placeholder="contact.message_placeholder" name="message" required></textarea>
-    <button type="submit" class="btn-primary-submit" data-i18n="contact.send_button" onclick="alert(translations[localStorage.getItem('lang') || 'fr']['contact.message_sent'])">Envoyer</button>
-  </div>
-  <p>
+  <h2 data-i18n="contact.title">Contact</h2>
+    <div class="contact-form">
+    <input type="text" placeholder="Nom" name="name" required>
+    <input type="email" placeholder="Email" name="email" required>
+    <textarea placeholder="Votre question ou type de produits, volume, destinations..." name="message" required></textarea>
+        <button type="submit" class="btn-primary-submit" data-i18n="contact.send_button" onclick="alert('Merci ! Votre message a été envoyé.')">Envoyer</button>
+  </div>
+  <p>
     <a href="mailto:contact.selmacs@gmail.com" class="email-link">
         <span data-i18n="contact.email_text">✉️ Envoyer un email</span>
     </a>
   </p>
 </section>
+
 <footer>
   <p class="copyright-text">© 2025 SelMiles. Tous droits réservés.</p>
   <div class="footer-logos">
@@ -146,9 +147,7 @@ const translations = {
     "advantages.support":"<span class='card-icon'>⚙️</span> Support client personnalisé", 
     "contact.title":"Contact",
     "contact.email_text":"✉️ Envoyer un email", 
-    "contact.send_button": "Envoyer",
-    "contact.message_placeholder": "Votre question ou type de produits, volume, destinations...",
-    "contact.message_sent": "Merci ! Votre message a été envoyé."
+    "contact.send_button": "Envoyer"
   },
   en: {
     "hero.title":"SELling made simple — no matter the Miles.", 
@@ -176,10 +175,7 @@ const translations = {
     "advantages.support":"<span class='card-icon'>⚙️</span> Personalised client support", 
     "contact.title":"Contact",
     "contact.email_text":"✉️ Send an email", 
-    "contact.send_button": "Send",
-    "contact.message_placeholder": "Your question or product type, volume, destinations...",
-    "contact.message_sent": "Thank you! Your message has been sent."
-},
+    "contact.send_button": "Send"
   },
   cn: {
     "hero.title":"销售从未如此简单，无惧万里之遥。", 
@@ -207,10 +203,7 @@ const translations = {
     "advantages.support":"<span class='card-icon'>⚙️</span> 个性化客户支持", 
     "contact.title":"联系",
     "contact.email_text":"✉️ 发送邮件", 
-    "contact.send_button": "发送",
-    "contact.message_placeholder": "您的问题或产品类型、数量、目的地...",
-    "contact.message_sent": "谢谢！您的信息已发送。"
-},
+    "contact.send_button": "发送"
   }
 };
 
@@ -230,8 +223,7 @@ function applyLang(lang){
 
   document.querySelector('.btn-primary').textContent = translations[lang]["hero.cta"];
   document.querySelector('.btn-primary-submit').textContent = translations[lang]["contact.send_button"];
-  document.querySelector('.email-link span').innerHTML = translations[lang]["contact.email_text"];
-  document.querySelector('[data-i18n-placeholder]').placeholder = translations[lang]["contact.message_placeholder"];
+  document.querySelector('.email-link span').innerHTML = translations[lang]["contact.email_text"]; 
   localStorage.setItem('lang', lang);
 }
 applyLang(localStorage.getItem('lang') || 'fr');
