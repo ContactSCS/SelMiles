@@ -1,5 +1,5 @@
 /* ======================================= */
-/* STYLES FINALS SELMILES (V12 - Couleurs finales : H2 et Langues en Noir) */
+/* STYLES FINALS SELMILES (V11 - Corrections Mobiles) */
 /* ======================================= */
 
 :root {
@@ -63,8 +63,6 @@ header {
     overflow: hidden; 
     align-self: flex-start; 
 }
-
-/* --- CHANGEMENT 1 : Langues en noir par défaut --- */
 .lang-switch button {
     cursor: pointer;
     background: none;
@@ -73,7 +71,6 @@ header {
     font-size: 1rem;
     font-weight: 500;
     transition: background-color 0.2s, color 0.2s;
-    color: var(--main-color); /* Ajouté/modifié pour le noir */
 }
 .lang-switch button:hover {
     background-color: var(--accent-color);
@@ -147,10 +144,9 @@ section {
   margin: auto; 
 }
 
-/* --- CHANGEMENT 2 : Titres H2 en noir --- */
 h2 {
-    color: var(--main-color); /* Changé de --accent-color à --main-color (Noir) */ 
-    font-size: 2.2rem; 
+    color: var(--accent-color); 
+    font-size: 2.2rem; /* Garder cette taille pour les titres de section */
     font-weight: 700;
     margin-bottom: 3rem;
     text-align: center; 
@@ -544,6 +540,7 @@ footer {
         margin: 0; 
         padding: 0.2rem 0;
         font-size: 1rem;
+        /* La couleur est gérée par défaut (var(--accent-color) pour le bleu/violet) */
     }
 
     /* --- FIN CORRECTION HEADER & NAVIGATION MOBILE --- */
