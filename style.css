@@ -3,27 +3,27 @@
 /* ======================================= */
 
 :root {
-  --main-bg: #ffffff;
-  --main-color: #212529; /* Texte noir/sombre */
-  --light-text: #6c757d; /* Texte gris pour l'italique (fondateur) */
-  --accent-color: #7038B4; 
-  --btn-bg: #7038B4; 
-  --btn-color: #fff; 
-  --card-bg: #f8f9fa; 
-  --form-bg: #fff; 
-  --form-shadow: rgba(0, 0, 0, 0.05); 
-  --font-family: 'Poppins', sans-serif;
-  --dark-color: #000000; /* Nouvelle variable pour le noir pur */
+  --main-bg: #ffffff;
+  --main-color: #212529; /* Texte noir/sombre */
+  --light-text: #6c757d; /* Texte gris pour l'italique (fondateur) */
+  --accent-color: #7038B4; 
+  --btn-bg: #7038B4; 
+  --btn-color: #fff; 
+  --card-bg: #f8f9fa; 
+  --form-bg: #fff; 
+  --form-shadow: rgba(0, 0, 0, 0.05); 
+  --font-family: 'Poppins', sans-serif;
+  --dark-color: #000000; /* Nouvelle variable pour le noir pur */
 }
 
 body {
-  font-family: var(--font-family);
-  color: var(--main-color);
-  background: var(--main-bg);
-  margin: 0;
-  padding: 0;
-  line-height: 1.7; 
-  font-size: 1.05rem; 
+  font-family: var(--font-family);
+  color: var(--main-color);
+  background: var(--main-bg);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7; 
+  font-size: 1.05rem; 
 }
 
 /* ======================================= */
@@ -31,66 +31,66 @@ body {
 /* ======================================= */
 
 header {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  padding: 0.75rem 2rem 0; 
-  border-bottom: 1px solid #e9ecef;
-  position: relative; 
-  background: var(--main-bg);
-  z-index: 1000;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 0.75rem 2rem 0; 
+  border-bottom: 1px solid #e9ecef;
+  position: relative; 
+  background: var(--main-bg);
+  z-index: 1000;
 }
 
 .header-top {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 0.5rem; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 0.5rem; 
 }
 
 .main-logo {
-    height: 110px; 
-    align-self: flex-start; 
+    height: 110px; 
+    align-self: flex-start; 
 }
 
 .lang-switch {
-    gap: 0; 
-    display: flex;
-    border: 1px solid #ced4da; 
-    border-radius: 0.5rem;
-    overflow: hidden; 
-    align-self: flex-start; 
+    gap: 0; 
+    display: flex;
+    border: 1px solid #ced4da; 
+    border-radius: 0.5rem;
+    overflow: hidden; 
+    align-self: flex-start; 
 }
 .lang-switch button {
-    cursor: pointer;
-    background: none;
-    border: none; 
-    padding: 0.3rem 0.6rem;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+    background: none;
+    border: none; 
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
 }
 .lang-switch button:hover {
-    background-color: var(--accent-color);
-    color: var(--btn-color);
+    background-color: var(--accent-color);
+    color: var(--btn-color);
 }
 
 .header-nav {
-    border-top: 1px solid #e9ecef;
-    width: 100%;
-    max-width: 1000px; 
-    margin: 0 auto; 
-    text-align: center;
-    padding: 0.75rem 0; 
+    border-top: 1px solid #e9ecef;
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    text-align: center;
+    padding: 0.75rem 0; 
 }
 
 .header-nav a {
-    margin: 0 1.2rem;
-    font-weight: 600;
-    font-size: 1.05rem;
-    color: var(--accent-color); 
+    margin: 0 1.2rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--accent-color); 
 }
 
 /* ======================================= */
@@ -98,40 +98,40 @@ header {
 /* ======================================= */
 
 .hero {
-  text-align: center;
-  padding: 6rem 1rem;
+  text-align: center;
+  padding: 6rem 1rem;
 }
 
 .hero h1 {
-    font-size: 2.8rem; /* Augmenté */
-    font-weight: 700;
-    color: var(--main-color); /* Assurer noir */
-    line-height: 1.2;
+    font-size: 2.8rem; /* Augmenté */
+    font-weight: 700;
+    color: var(--main-color); /* Assurer noir */
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.3rem; /* Augmenté */
-    margin-bottom: 2rem;
-    color: var(--light-text);
-    font-weight: 400; /* Normal */
+    font-size: 1.3rem; /* Augmenté */
+    margin-bottom: 2rem;
+    color: var(--light-text);
+    font-weight: 400; /* Normal */
 }
 
 .btn-primary {
-  background-color: var(--btn-bg);
-  padding: 1.2rem 2.5rem; 
-  font-size: 1.2rem;
-  font-weight: 600;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
-  border-radius: 0.5rem;
-  border: none;
-  color: var(--btn-color);
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
+  background-color: var(--btn-bg);
+  padding: 1.2rem 2.5rem; 
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--btn-color);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .btn-primary:hover {
-  background-color: #8347C9; 
-  transform: translateY(-2px);
+  background-color: #8347C9; 
+  transform: translateY(-2px);
 }
 
 /* ======================================= */
@@ -139,25 +139,25 @@ header {
 /* ======================================= */
 
 section {
-  padding: 5rem 2rem; 
-  max-width: 1000px; 
-  margin: auto; 
+  padding: 5rem 2rem; 
+  max-width: 1000px; 
+  margin: auto; 
 }
 
 h2 {
-    color: var(--accent-color); 
-    font-size: 2.2rem; /* Garder cette taille pour les titres de section */
-    font-weight: 700;
-    margin-bottom: 3rem;
-    text-align: center; 
-    
-    position: sticky;
-    top: 0; 
-    background: var(--main-bg); 
-    padding: 1.5rem 0 1.5rem 0; 
-    z-index: 900; 
-    border-bottom: 1px solid #e9ecef;
-    contain: layout; 
+    color: var(--accent-color); 
+    font-size: 2.2rem; /* Garder cette taille pour les titres de section */
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center; 
+    
+    position: sticky;
+    top: 0; 
+    background: var(--main-bg); 
+    padding: 1.5rem 0 1.5rem 0; 
+    z-index: 900; 
+    border-bottom: 1px solid #e9ecef;
+    contain: layout; 
 }
 
 /* ======================================= */
@@ -165,90 +165,90 @@ h2 {
 /* ======================================= */
 
 #about {
-    text-align: center; 
+    text-align: center; 
 }
 
 /* Texte principal en noir, taille ajustée */
 #about .about-text-main {
-    color: var(--main-color); 
-    font-weight: 400; 
-    font-size: 1.1rem; /* Légèrement plus grand */
-    max-width: 800px; 
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    color: var(--main-color); 
+    font-weight: 400; 
+    font-size: 1.1rem; /* Légèrement plus grand */
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 /* Mention du fondateur en ITALIQUE et GRIS */
 #about .founder-mention {
-    color: var(--light-text); 
-    font-style: italic;
-    font-weight: 400;
-    max-width: 800px;
-    margin-top: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 1.05rem; /* Légèrement plus grand */
+    color: var(--light-text); 
+    font-style: italic;
+    font-weight: 400;
+    max-width: 800px;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.05rem; /* Légèrement plus grand */
 }
 
 
 #partners {
-    text-align: center; 
+    text-align: center; 
 }
 
 /* Texte partenaire en NOIR et NORMAL, taille ajustée */
 #partners p {
-    color: var(--main-color); 
-    font-style: normal; 
-    font-weight: 400; 
-    font-size: 1.1rem; /* Légèrement plus grand */
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    color: var(--main-color); 
+    font-style: normal; 
+    font-weight: 400; 
+    font-size: 1.1rem; /* Légèrement plus grand */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .partner-logo-container {
-    padding: 2rem 0;
-    border-bottom: 1px solid #e9ecef; 
-    text-align: center; 
+    padding: 2rem 0;
+    border-bottom: 1px solid #e9ecef; 
+    text-align: center; 
 }
 
 .partner-logo-large {
-    height: 120px; 
+    height: 120px; 
 }
 
 /* ======================================= */
 /* 5. SERVICES (Flip Card - "Gestion des retours" en noir) */
 /* ======================================= */
 #services {
-    text-align: center;
+    text-align: center;
 }
 
 #services .circle-layout {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    max-width: 900px; 
-    height: 700px;
-    margin: 3rem auto; 
-    gap: 10px; 
-    perspective: 1000px; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 900px; 
+    height: 700px;
+    margin: 3rem auto; 
+    gap: 10px; 
+    perspective: 1000px; 
 }
 
 .card-flip-container {
-    background-color: transparent;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    transition: transform 0.6s;
-    outline: none;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.6s;
+    outline: none;
 }
 .card-flip-container:focus {
-    box-shadow: 0 0 0 3px var(--accent-color);
+    box-shadow: 0 0 0 3px var(--accent-color);
 }
 
 
@@ -260,103 +260,103 @@ h2 {
 
 
 .card-flip-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
 .card-flip-container.is-flipped .card-flip-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 
 .card-flip-front, .card-flip-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    font-weight: 600;
-    background-color: var(--main-bg);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
-    border-radius: 0.5rem;
-    border: 1px solid #eee; 
-    padding: 1rem;
-    box-sizing: border-box;
-    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    font-weight: 600;
+    background-color: var(--main-bg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
+    border-radius: 0.5rem;
+    border: 1px solid #eee; 
+    padding: 1rem;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 .card-flip-front {
-    z-index: 2;
-    transform: rotateY(0deg);
+    z-index: 2;
+    transform: rotateY(0deg);
 }
 
 .card-flip-back {
-    background-color: var(--accent-color); 
-    color: var(--btn-color);
-    transform: rotateY(180deg);
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 1.3;
+    background-color: var(--accent-color); 
+    color: var(--btn-color);
+    transform: rotateY(180deg);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.3;
 }
 
 /* Style spécifique pour la carte "Gestion des retours" (fond noir) */
 .card-flip-container.card-center .card-flip-front,
 .card-flip-container.card-center .card-flip-back {
-    background-color: var(--dark-color); /* Fond noir */
-    color: var(--btn-color); /* Texte blanc */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    border: none;
-    z-index: 10;
+    background-color: var(--dark-color); /* Fond noir */
+    color: var(--btn-color); /* Texte blanc */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+    z-index: 10;
 }
 
 /* ======================================= */
 /* 6. AVANTAGES (Vertical Stack) */
 /* ======================================= */
 #advantages {
-    text-align: center; 
+    text-align: center; 
 }
 
 .advantages.vertical-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem; 
-    max-width: 500px; 
-    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+    max-width: 500px; 
+    margin: 3rem auto;
 }
 
 .advantages.vertical-layout .card {
-    min-height: 100px;
-    padding: 1rem 2rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: default;
-    color: var(--main-color); 
-    font-weight: 600; 
-    background-color: var(--main-bg);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
-    border-radius: 0.5rem;
-    border: 1px solid #eee; 
+    min-height: 100px;
+    padding: 1rem 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+    color: var(--main-color); 
+    font-weight: 600; 
+    background-color: var(--main-bg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
+    border-radius: 0.5rem;
+    border: 1px solid #eee; 
 }
 
 .advantages.vertical-layout .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-icon {
-    display: block;
-    font-size: 2.5rem; 
-    margin-bottom: 0.5rem;
-    line-height: 1;
+    display: block;
+    font-size: 2.5rem; 
+    margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
 /* ======================================= */
@@ -364,68 +364,68 @@ h2 {
 /* ======================================= */
 
 #contact {
-    text-align: center;
+    text-align: center;
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 500px;
-  margin: 2rem auto; 
-  padding: 2.5rem; 
-  background-color: var(--form-bg); 
-  box-shadow: 0 0 30px var(--form-shadow); 
-  border-radius: 1rem;
-  text-align: left; 
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 2rem auto; 
+  padding: 2.5rem; 
+  background-color: var(--form-bg); 
+  box-shadow: 0 0 30px var(--form-shadow); 
+  border-radius: 1rem;
+  text-align: left; 
 }
 
-.contact-form input[type="text"], 
-.contact-form input[type="email"], 
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
 .contact-form textarea {
-    padding: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    color: var(--main-color);
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--main-color);
 }
 
 .contact-form textarea {
-    height: 120px;
-    resize: vertical;
+    height: 120px;
+    resize: vertical;
 }
 
 .btn-primary-submit {
-  width: 100%; 
-  background-color: var(--accent-color);
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  border: none;
-  color: var(--btn-color);
-  cursor: pointer;
-  transition: background-color 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  width: 100%; 
+  background-color: var(--accent-color);
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--btn-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .btn-primary-submit:hover {
-    background-color: #8347C9;
+    background-color: #8347C9;
 }
 
 
 .email-link {
-    text-decoration: none;
-    color: var(--accent-color);
-    font-weight: 600;
-    font-size: 1.15rem; 
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.15rem; 
 }
 
 #contact p {
-    text-align: center; 
-    margin-top: 1.5rem;
+    text-align: center; 
+    margin-top: 1.5rem;
 }
 
 
@@ -434,86 +434,86 @@ h2 {
 /* ======================================= */
 
 footer {
-  text-align: center; 
-  padding: 3rem 2rem;
-  background-color: #f8f9fa; 
-  border-top: 1px solid #e9ecef;
+  text-align: center; 
+  padding: 3rem 2rem;
+  background-color: #f8f9fa; 
+  border-top: 1px solid #e9ecef;
 }
 
 .copyright-text {
-    font-size: 1rem; 
-    margin-bottom: 1rem;
-    color: var(--main-color);
+    font-size: 1rem; 
+    margin-bottom: 1rem;
+    color: var(--main-color);
 }
 
 .footer-logos {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  gap: 2rem;
-  margin-top: 1rem;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 .footer-logos a img {
-  height: 40px; 
-  opacity: 0.8;
-  transition: opacity 0.2s;
+  height: 40px; 
+  opacity: 0.8;
+  transition: opacity 0.2s;
 }
 .footer-logos a img:hover {
-    opacity: 1;
+    opacity: 1;
 }
 
 /* ======================================= */
 /* 9. MEDIA QUERIES (Mobile) */
 /* ======================================= */
 @media (max-width: 992px) {
-    h2 {
-        padding: 1rem 0 1rem 0;
-        margin-bottom: 2rem;
-    }
+    h2 {
+        padding: 1rem 0 1rem 0;
+        margin-bottom: 2rem;
+    }
 
-    /* Désactivation du cercle pour tablette/mobile */
-    #services .circle-layout {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        max-width: 100%;
-    }
-    
-    .card-flip-container {
-        height: 120px; 
-        perspective: none;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
-    }
-    .card-flip-inner {
-        transform: none !important;
-        transition: none;
-    }
-    .card-flip-front, .card-flip-back {
-        position: relative;
-        transform: none !important;
-        backface-visibility: visible;
-        background-color: var(--main-bg);
-        color: var(--main-color);
-        box-shadow: none;
-        border: 1px solid #eee;
-        padding: 1rem;
-    }
+    /* Désactivation du cercle pour tablette/mobile */
+    #services .circle-layout {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .card-flip-container {
+        height: 120px; 
+        perspective: none;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
+    }
+    .card-flip-inner {
+        transform: none !important;
+        transition: none;
+    }
+    .card-flip-front, .card-flip-back {
+        position: relative;
+        transform: none !important;
+        backface-visibility: visible;
+        background-color: var(--main-bg);
+        color: var(--main-color);
+        box-shadow: none;
+        border: 1px solid #eee;
+        padding: 1rem;
+    }
 
-    /* La carte centrale "Gestion des retours" redevient noire/blanc sur mobile aussi */
-    .card-flip-container.card-center .card-flip-front {
-         background-color: var(--dark-color); /* Fond noir */
-         color: var(--btn-color); /* Texte blanc */
-         order: -1;
-    }
-    .card-flip-back {
-        display: none; 
-    }
-    .card-flip-front {
-        display: flex;
-    }
-    
-    .advantages.vertical-layout {
-        max-width: 100%;
-    }
+    /* La carte centrale "Gestion des retours" redevient noire/blanc sur mobile aussi */
+    .card-flip-container.card-center .card-flip-front {
+         background-color: var(--dark-color); /* Fond noir */
+         color: var(--btn-color); /* Texte blanc */
+         order: -1;
+    }
+    .card-flip-back {
+        display: none; 
+    }
+    .card-flip-front {
+        display: flex;
+    }
+    
+    .advantages.vertical-layout {
+        max-width: 100%;
+    }
 }
