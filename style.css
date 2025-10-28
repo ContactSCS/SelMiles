@@ -1,0 +1,585 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* ======================================= */\
+/* STYLES FINAUX SELMILES (V19 - STABILISATION - style.css) */\
+/* ======================================= */\
+\
+:root \{\
+\'a0 \'a0 --main-bg: #ffffff;\
+\'a0 \'a0 --main-color: #212529; \
+\'a0 \'a0 --light-text: #6c757d; \
+\'a0 \'a0 --accent-color: #7038B4; \
+\'a0 \'a0 --btn-bg: #7038B4; \
+\'a0 \'a0 --btn-color: #fff; \
+\'a0 \'a0 --card-bg: #fff; \
+\'a0 \'a0 --form-bg: #fff; \
+\'a0 \'a0 --form-shadow: rgba(0, 0, 0, 0.05); \
+\'a0 \'a0 --font-family: 'Poppins', sans-serif;\
+\'a0 \'a0 --dark-color: #000000; \
+\}\
+\
+/* HARMONISATION G\'c9N\'c9RALE */\
+body \{\
+\'a0 \'a0 font-family: var(--font-family);\
+\'a0 \'a0 color: var(--main-color);\
+\'a0 \'a0 background: var(--main-bg);\
+\'a0 \'a0 margin: 0;\
+\'a0 \'a0 padding: 0;\
+\'a0 \'a0 line-height: 1.7; \
+\'a0 \'a0 font-size: 1.1rem; \
+\}\
+\
+\
+/* ======================================= */\
+/* 1. HEADER & NAVIGATION */\
+/* ======================================= */\
+\
+header \{\
+\'a0 \'a0 display: flex;\
+\'a0 \'a0 flex-direction: column; \
+\'a0 \'a0 align-items: center;\
+\'a0 \'a0 padding: 0 2rem 0; \
+\'a0 \'a0 position: relative; \
+\'a0 \'a0 background: var(--main-bg);\
+\'a0 \'a0 z-index: 1000;\
+\}\
+\
+.header-top \{\
+\'a0 \'a0 display: flex;\
+\'a0 \'a0 justify-content: space-between; \
+\'a0 \'a0 align-items: center; \
+\'a0 \'a0 width: 100%;\
+\'a0 \'a0 max-width: 1200px;\
+\'a0 \'a0 padding: 0.5rem 0; \
+\'a0 \'a0 border-bottom: 1px solid #e9ecef;\
+\}\
+\
+/* LOGO: Plus grand (130px) */\
+.main-logo \{\
+\'a0 \'a0 height: 130px; \
+\}\
+\
+/* LANGUES: Plus grandes */\
+.lang-switch \{\
+\'a0 \'a0 gap: 0; \
+\'a0 \'a0 display: flex;\
+\'a0 \'a0 border: 1px solid #ced4da; \
+\'a0 \'a0 border-radius: 0.5rem;\
+\'a0 \'a0 overflow: hidden; \
+\}\
+.lang-switch button \{\
+\'a0 \'a0 cursor: pointer;\
+\'a0 \'a0 background: none;\
+\'a0 \'a0 border: none; \
+\'a0 \'a0 padding: 0.4rem 0.8rem; \
+\'a0 \'a0 font-size: 1.1rem; \
+\'a0 \'a0 font-weight: 500;\
+\'a0 \'a0 transition: background-color 0.2s, color 0.2s;\
+\}\
+.lang-switch button:hover \{\
+\'a0 \'a0 background-color: var(--accent-color);\
+\'a0 \'a0 color: var(--btn-color);\
+\}\
+.lang-switch button:nth-child(1) \{\
+    /* FR actif */\
+    background-color: var(--accent-color);\
+\'a0 \'a0 color: var(--btn-color);\
+\}\
+\
+/* NAVIGATION EN BANDE NOIRE */\
+.header-nav \{\
+\'a0 \'a0 width: 100%;\
+\'a0 \'a0 max-width: 1200px; \
+\'a0 \'a0 margin: 0 auto; \
+\'a0 \'a0 text-align: right; \
+\'a0 \'a0 padding: 0.8rem 0; \
+\'a0 \'a0 background-color: var(--dark-color); /* BANDE NOIRE */\
+\}\
+\
+.header-nav a \{\
+\'a0 \'a0 margin-left: 1.2rem;\
+\'a0 \'a0 font-weight: 600;\
+\'a0 \'a0 font-size: 1.1rem; \
+\'a0 \'a0 color: var(--btn-color); /* Liens en BLANC pour la bande noire */\
+\'a0 \'a0 text-decoration: none;\
+\'a0 \'a0 transition: color 0.2s;\
+\}\
+.header-nav a:hover \{\
+    color: var(--accent-color); /* Violet au survol */\
+\}\
+\
+\
+/* ======================================= */\
+/* 2. SECTION H\'c9RO & Boutons */\
+/* ======================================= */\
+\
+.hero \{\
+\'a0 \'a0 text-align: center;\
+\'a0 \'a0 padding: 6rem 1rem;\
+\}\
+\
+.hero h1 \{\
+\'a0 \'a0 font-size: 2.8rem; \
+\'a0 \'a0 font-weight: 700;\
+\'a0 \'a0 color: var(--main-color); \
+\'a0 \'a0 line-height: 1.2;\
+\}\
+\
+.hero p \{\
+\'a0 \'a0 font-size: 1.3rem; \
+\'a0 \'a0 margin-bottom: 2rem;\
+\'a0 \'a0 color: var(--light-text);\
+\'a0 \'a0 font-weight: 400; \
+\}\
+\
+.btn-primary \{\
+\'a0 \'a0 background-color: var(--btn-bg);\
+\'a0 \'a0 padding: 1rem 2rem; \
+\'a0 \'a0 font-size: 1.1rem;\
+\'a0 \'a0 font-weight: 600;\
+\'a0 \'a0 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); \
+\'a0 \'a0 border-radius: 0.5rem;\
+\'a0 \'a0 border: none;\
+\'a0 \'a0 color: var(--btn-color);\
+\'a0 \'a0 cursor: pointer;\
+\'a0 \'a0 transition: background-color 0.2s, transform 0.2s;\
+\}\
+\
+.btn-primary:hover \{\
+\'a0 \'a0 background-color: #8347C9; \
+\'a0 \'a0 transform: translateY(-2px);\
+\}\
+\
+/* ======================================= */\
+/* 3. SECTIONS G\'c9N\'c9RALES & TITRES */\
+/* ======================================= */\
+\
+section \{\
+\'a0 \'a0 padding: 5rem 2rem; \
+\'a0 \'a0 max-width: 1000px; \
+\'a0 \'a0 margin: auto; \
+\}\
+\
+/* Titres de section (H2) en violet et centr\'e9 */\
+h2 \{\
+\'a0 \'a0 color: var(--accent-color); \
+\'a0 \'a0 font-size: 2.2rem; \
+\'a0 \'a0 font-weight: 700;\
+\'a0 \'a0 margin-bottom: 3rem;\
+\'a0 \'a0 text-align: center; \
+\'a0 \'a0 position: static; \
+\'a0 \'a0 padding: 0; \
+\}\
+\
+\
+/* ======================================= */\
+/* 4. \'c0 PROPOS & PARTENAIRES */\
+/* ======================================= */\
+\
+#about, #partners \{\
+\'a0 \'a0 text-align: center; \
+\}\
+\
+/* Texte principal taille ajust\'e9e */\
+#about .about-text-main, #partners p \{\
+\'a0 \'a0 color: var(--main-color); \
+\'a0 \'a0 font-weight: 400; \
+\'a0 \'a0 font-size: 1.15rem; \
+\'a0 \'a0 max-width: 800px; \
+\'a0 \'a0 margin-left: auto;\
+\'a0 \'a0 margin-right: auto;\
+\'a0 \'a0 text-align: center;\
+\}\
+\
+/* Mention du fondateur en ITALIQUE et GRIS */\
+#about .founder-mention \{\
+\'a0 \'a0 color: var(--light-text); \
+\'a0 \'a0 font-style: italic;\
+\'a0 \'a0 font-weight: 400;\
+\'a0 \'a0 max-width: 800px;\
+\'a0 \'a0 margin-top: 1.5rem;\
+\'a0 \'a0 margin-left: auto;\
+\'a0 \'a0 margin-right: auto;\
+\'a0 \'a0 text-align: center;\
+\'a0 \'a0 font-size: 1.05rem; \
+\}\
+\
+.partner-logo-container \{\
+\'a0 \'a0 padding: 2rem 0;\
+\'a0 \'a0 text-align: center; \
+\}\
+\
+.partner-logo-large \{\
+\'a0 \'a0 height: 60px; \
+\'a0 \'a0 margin: 0 auto;\
+\'a0 \'a0 display: block;\
+    /* Ligne de s\'e9paration sous le logo comme dans la vid\'e9o */\
+    border-bottom: 1px solid #e9ecef;\
+    padding-bottom: 2rem;\
+    max-width: 250px;\
+\}\
+\
+/* ======================================= */\
+/* 5. SERVICES (Layout Grid circulaire) */\
+/* ======================================= */\
+#services \{\
+\'a0 \'a0 text-align: center;\
+\}\
+\
+#services .circle-layout \{\
+\'a0 \'a0 display: grid;\
+\'a0 \'a0 grid-template-columns: repeat(3, 1fr);\
+\'a0 \'a0 grid-template-rows: repeat(3, 1fr);\
+\'a0 \'a0 max-width: 900px; \
+\'a0 \'a0 height: 600px; \
+\'a0 \'a0 margin: 3rem auto; \
+\'a0 \'a0 gap: 10px; \
+\'a0 \'a0 perspective: 1000px; \
+\}\
+\
+.card-flip-container \{\
+\'a0 \'a0 background-color: transparent;\
+\'a0 \'a0 border-radius: 0.5rem;\
+\'a0 \'a0 cursor: pointer;\
+\'a0 \'a0 position: relative;\
+\'a0 \'a0 height: 100%;\
+\'a0 \'a0 width: 100%;\
+\'a0 \'a0 transition: transform 0.6s;\
+\'a0 \'a0 outline: none;\
+\}\
+.card-flip-container:focus \{\
+\'a0 \'a0 box-shadow: 0 0 0 3px var(--accent-color);\
+\}\
+\
+\
+.card-center \{ grid-column: 2; grid-row: 2; \}\
+.card-pos-1 \{ grid-column: 2; grid-row: 1; \}\
+.card-pos-2 \{ grid-column: 3; grid-row: 2; \}\
+.card-pos-3 \{ grid-column: 2; grid-row: 3; \}\
+.card-pos-4 \{ grid-column: 1; grid-row: 2; \}\
+\
+\
+.card-flip-inner \{\
+\'a0 \'a0 position: relative;\
+\'a0 \'a0 width: 100%;\
+\'a0 \'a0 height: 100%;\
+\'a0 \'a0 text-align: center;\
+\'a0 \'a0 transition: transform 0.6s;\
+\'a0 \'a0 transform-style: preserve-3d;\
+\}\
+\
+.card-flip-container.is-flipped .card-flip-inner \{\
+\'a0 \'a0 transform: rotateY(180deg);\
+\}\
+\
+\
+.card-flip-front, .card-flip-back \{\
+\'a0 \'a0 position: absolute;\
+\'a0 \'a0 width: 100%;\
+\'a0 \'a0 height: 100%;\
+\'a0 \'a0 -webkit-backface-visibility: hidden; \
+\'a0 \'a0 backface-visibility: hidden;\
+\'a0 \'a0\'a0\
+\'a0 \'a0 display: flex;\
+\'a0 \'a0 flex-direction: column;\
+\'a0 \'a0 justify-content: center; \
+\'a0 \'a0 align-items: center; \
+\'a0 \'a0 text-align: center;\
+\'a0 \'a0 font-weight: 600;\
+\'a0 \'a0 background-color: var(--card-bg); \
+\'a0 \'a0 box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); \
+\'a0 \'a0 border-radius: 0.5rem;\
+\'a0 \'a0 border: 1px solid #eee; \
+\'a0 \'a0 padding: 1rem;\
+\'a0 \'a0 box-sizing: border-box;\
+\'a0 \'a0 cursor: pointer;\
+\}\
+.card-flip-front h3 \{\
+    margin: 0;\
+    font-size: 1rem;\
+    font-weight: 600;\
+\}\
+.card-flip-back p \{\
+    font-size: 0.95rem;\
+    font-weight: 500;\
+    line-height: 1.3;\
+    margin: 0;\
+\}\
+\
+.card-flip-front \{\
+\'a0 \'a0 z-index: 2;\
+\'a0 \'a0 transform: rotateY(0deg);\
+\}\
+\
+.card-flip-back \{\
+\'a0 \'a0 background-color: var(--accent-color); \
+\'a0 \'a0 color: var(--btn-color);\
+\'a0 \'a0 transform: rotateY(180deg);\
+\}\
+\
+.card-icon \{\
+    font-size: 2.2rem;\
+    margin-bottom: 0.5rem;\
+\}\
+/* Carte centrale (Gestion des retours) */\
+.card-flip-container.card-center .card-flip-front,\
+.card-flip-container.card-center .card-flip-back \{\
+\'a0 \'a0 background-color: var(--accent-color); \
+\'a0 \'a0 color: var(--btn-color); \
+\'a0 \'a0 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);\
+\'a0 \'a0 border: none;\
+\'a0 \'a0 z-index: 10;\
+\}\
+.card-icon-center \{\
+    font-size: 2.2rem;\
+    margin-bottom: 0.5rem;\
+    color: var(--btn-color);\
+\}\
+.card-flip-container.card-center .card-flip-back p \{\
+    font-size: 1.1rem;\
+\}\
+\
+\
+/* ======================================= */\
+/* 6. AVANTAGES (Vertical Stack) */\
+/* ======================================= */\
+#advantages \{\
+\'a0 \'a0 text-align: center; \
+\}\
+\
+.advantages.vertical-layout \{\
+\'a0 \'a0 display: flex;\
+\'a0 \'a0 flex-direction: column;\
+\'a0 \'a0 gap: 1rem; \
+\'a0 \'a0 max-width: 600px; \
+\'a0 \'a0 margin: 3rem auto;\
+\}\
+\
+.advantages.vertical-layout .card \{\
+\'a0 \'a0 min-height: 80px;\
+\'a0 \'a0 padding: 1.5rem 2rem;\
+\'a0 \'a0 transition: transform 0.3s, box-shadow 0.3s;\
+\'a0 \'a0 cursor: default;\
+\'a0 \'a0 color: var(--main-color); \
+\'a0 \'a0 font-weight: 500; \
+\'a0 \'a0 background-color: var(--card-bg);\
+\'a0 \'a0 box-shadow: 0 0 15px rgba(0, 0, 0, 0.08); \
+\'a0 \'a0 border-radius: 0.5rem;\
+\'a0 \'a0 border: 1px solid #eee; \
+\'a0 \'a0 display: flex;\
+\'a0 \'a0 align-items: center;\
+\'a0 \'a0 text-align: left;\
+\}\
+\
+.advantages.vertical-layout .card:hover \{\
+\'a0 \'a0 transform: translateY(-3px);\
+\'a0 \'a0 box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);\
+\}\
+\
+.advantages.vertical-layout .card .card-icon \{\
+\'a0 \'a0 font-size: 1.5rem; \
+\'a0 \'a0 margin-right: 1rem;\
+    margin-bottom: 0;\
+\'a0 \'a0 line-height: 1;\
+\}\
+\
+/* ======================================= */\
+/* 7. CONTACT */\
+/* ======================================= */\
+\
+#contact \{\
+\'a0 \'a0 text-align: center;\
+\}\
+\
+.contact-form \{\
+\'a0 \'a0 display: flex;\
+\'a0 \'a0 flex-direction: column;\
+\'a0 \'a0 gap: 1.5rem;\
+\'a0 \'a0 max-width: 450px;\
+\'a0 \'a0 margin: 2rem auto; \
+\'a0 \'a0 padding: 3rem 2.5rem; \
+\'a0 \'a0 background-color: var(--form-bg); \
+\'a0 \'a0 box-shadow: 0 0 30px var(--form-shadow); \
+\'a0 \'a0 border-radius: 1rem;\
+\'a0 \'a0 text-align: left; \
+\}\
+\
+.contact-form input[type="text"], \
+.contact-form input[type="email"], \
+.contact-form textarea \{\
+\'a0 \'a0 padding: 1rem;\
+\'a0 \'a0 border: 1px solid #ced4da;\
+\'a0 \'a0 border-radius: 0.3rem;\
+\'a0 \'a0 font-size: 1rem;\
+\'a0 \'a0 width: 100%;\
+\'a0 \'a0 box-sizing: border-box;\
+\'a0 \'a0 color: var(--main-color);\
+\}\
+\
+.contact-form textarea \{\
+\'a0 \'a0 height: 100px;\
+\'a0 \'a0 resize: vertical;\
+\}\
+\
+.btn-primary-submit \{\
+\'a0 \'a0 width: 100%; \
+\'a0 \'a0 background-color: var(--btn-bg);\
+\'a0 \'a0 padding: 1rem 2rem;\
+\'a0 \'a0 font-size: 1.1rem;\
+\'a0 \'a0 font-weight: 600;\
+\'a0 \'a0 border-radius: 0.5rem;\
+\'a0 \'a0 border: none;\
+\'a0 \'a0 color: var(--btn-color);\
+\'a0 \'a0 cursor: pointer;\
+\'a0 \'a0 transition: background-color 0.2s;\
+\'a0 \'a0 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); \
+\}\
+\
+.btn-primary-submit:hover \{\
+\'a0 \'a0 background-color: #8347C9;\
+\}\
+\
+#contact p \{\
+\'a0 \'a0 text-align: center; \
+\'a0 \'a0 margin-top: 2rem;\
+\}\
+\
+.contact-email-icon \{\
+    font-size: 1.2rem;\
+    color: var(--accent-color);\
+    margin-right: 0.5rem;\
+\}\
+.email-link \{\
+\'a0 \'a0 text-decoration: none;\
+\'a0 \'a0 color: var(--accent-color);\
+\'a0 \'a0 font-weight: 600;\
+\'a0 \'a0 font-size: 1.05rem; \
+\}\
+\
+\
+/* ======================================= */\
+/* 8. FOOTER */\
+/* ======================================= */\
+\
+footer \{\
+\'a0 \'a0 text-align: center; \
+\'a0 \'a0 padding: 3rem 2rem;\
+\'a0 \'a0 background-color: #f8f9fa; \
+\'a0 \'a0 border-top: 1px solid #e9ecef;\
+\}\
+\
+.copyright-text \{\
+\'a0 \'a0 font-size: 1rem; \
+\'a0 \'a0 margin-bottom: 1rem;\
+\'a0 \'a0 color: var(--main-color);\
+\}\
+\
+.footer-logos \{\
+\'a0 \'a0 display: flex;\
+\'a0 \'a0 justify-content: center; \
+\'a0 \'a0 align-items: center;\
+\'a0 \'a0 gap: 1.5rem;\
+\'a0 \'a0 margin-top: 1rem;\
+\}\
+\
+.footer-logos a img \{\
+\'a0 \'a0 height: 30px; \
+\'a0 \'a0 opacity: 0.8;\
+\'a0 \'a0 transition: opacity 0.2s;\
+\}\
+.footer-logos a img:hover \{\
+\'a0 \'a0 opacity: 1;\
+\}\
+\
+/* ======================================= */\
+/* 9. MEDIA QUERIES (Mobile - Affichage vertical) */\
+/* ======================================= */\
+@media (max-width: 768px) \{\
+    \
+    /* Le logo et les langues sont r\'e9organis\'e9s */\
+    .header-top \{\
+        flex-direction: column;\
+        align-items: center;\
+        gap: 1rem;\
+    \}\
+    .main-logo \{\
+        height: 100px; /* Logo r\'e9duit sur mobile */\
+    \}\
+    \
+    .header-nav \{\
+        /* Masque la navigation sur mobile pour simplifier l'en-t\'eate */\
+        display: none;\
+    \}\
+\
+\'a0 \'a0 h2 \{\
+\'a0 \'a0 \'a0 \'a0 margin-bottom: 2rem;\
+\'a0 \'a0 \}\
+\
+    /* SERVICES : Passe \'e0 une liste verticale simple sur mobile */\
+\'a0 \'a0 #services .circle-layout \{\
+\'a0 \'a0 \'a0 \'a0 display: flex;\
+\'a0 \'a0 \'a0 \'a0 flex-direction: column;\
+\'a0 \'a0 \'a0 \'a0 height: auto;\
+\'a0 \'a0 \'a0 \'a0 max-width: 100%;\
+        gap: 1rem; \
+\'a0 \'a0 \}\
+\'a0 \'a0\'a0\
+\'a0 \'a0 .card-flip-container \{\
+\'a0 \'a0 \'a0 \'a0 height: 100px; \
+\'a0 \'a0 \'a0 \'a0 perspective: none;\
+\'a0 \'a0 \'a0 \'a0 box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);\'a0\
+\'a0 \'a0 \}\
+\
+    /* Rendre les cartes statiques sur mobile */\
+\'a0 \'a0 .card-flip-inner \{\
+\'a0 \'a0 \'a0 \'a0 transform: none !important;\
+\'a0 \'a0 \'a0 \'a0 transition: none;\
+\'a0 \'a0 \}\
+\'a0 \'a0 .card-flip-front, .card-flip-back \{\
+\'a0 \'a0 \'a0 \'a0 position: relative;\
+\'a0 \'a0 \'a0 \'a0 transform: none !important;\
+\'a0 \'a0 \'a0 \'a0 backface-visibility: visible;\
+\'a0 \'a0 \'a0 \'a0 background-color: var(--card-bg);\
+\'a0 \'a0 \'a0 \'a0 color: var(--main-color);\
+\'a0 \'a0 \'a0 \'a0 box-shadow: none;\
+\'a0 \'a0 \'a0 \'a0 border: 1px solid #eee;\
+\'a0 \'a0 \'a0 \'a0 padding: 0.8rem 1rem;\
+\'a0 \'a0 \'a0 \'a0 height: auto;\
+\'a0 \'a0 \}\
+\
+\'a0 \'a0 /* Afficher les cartes en ligne avec l'ic\'f4ne \'e0 gauche pour le format mobile */\
+    .card-flip-back \{\
+\'a0 \'a0 \'a0 \'a0 display: none;\'a0 /* Cache l'arri\'e8re sur mobile */\
+\'a0 \'a0 \}\
+\'a0 \'a0 .card-flip-front \{\
+\'a0 \'a0 \'a0 \'a0 display: flex;\
+\'a0 \'a0 \'a0 \'a0 flex-direction: row;\
+\'a0 \'a0 \'a0 \'a0 text-align: left;\
+\'a0 \'a0 \}\
+\'a0 \'a0 .card-flip-front h3 \{\
+\'a0 \'a0 \'a0 \'a0 text-align: left;\
+        font-size: 1rem;\
+\'a0 \'a0 \}\
+\'a0 \'a0 .card-flip-front .card-icon, .card-flip-front .card-icon-center \{\
+        font-size: 1.5rem;\
+        margin-right: 1rem;\
+        margin-bottom: 0;\
+    \}\
+    \
+    /* Carte centrale (Gestion des retours) reste en violet */\
+    .card-flip-container.card-center .card-flip-front \{\
+\'a0 \'a0 \'a0 \'a0 \'a0background-color: var(--accent-color); \
+\'a0 \'a0 \'a0 \'a0 \'a0color: var(--btn-color); \
+\'a0 \'a0 \'a0 \'a0 \'a0order: -1; \
+\'a0 \'a0 \'a0 \'a0 \'a0border: none;\
+\'a0 \'a0 \}\
+\'a0 \'a0\'a0\
+\'a0 \'a0 .advantages.vertical-layout \{\
+\'a0 \'a0 \'a0 \'a0 max-width: 100%;\
+\'a0 \'a0 \}\
+\}}
