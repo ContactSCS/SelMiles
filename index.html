@@ -43,7 +43,7 @@
 </section>
 
 <section id="partners">
-  <h2 data-i18n="partners.title">Nos Partenaires</h2>
+  <h2 data-i18n="partners.title">Partenaires</h2>
   <p data-i18n="partners.text">SelMiles est fière de collaborer avec des leaders de la logistique.</p>
   <div class="partner-logo-container">
     <a href="https://logidoo.co/home" target="_blank">
@@ -102,7 +102,7 @@
     <input type="text" data-i18n-placeholder="contact.name_placeholder" placeholder="Nom" name="name" required>
     <input type="email" data-i18n-placeholder="contact.email_placeholder" placeholder="Email" name="email" required>
     <textarea data-i18n-placeholder="contact.message_placeholder" placeholder="Votre question ou type de produits, volume, destinations..." name="message" required></textarea>
-        <button type="submit" class="btn-primary-submit" data-i18n="contact.send_button" onclick="alert('Merci ! Votre message a été envoyé.')">Envoyer</button>
+        <button type="submit" class="btn-primary-submit" data-i18n="contact.send_button" onclick="submitForm()">Envoyer</button>
   </div>
   <p>
     <a href="mailto:contact.selmacs@gmail.com" class="email-link">
@@ -120,6 +120,8 @@
 </footer>
 
 <script>
+let currentLang = localStorage.getItem('lang') || 'fr'; // Stocker la langue actuelle
+
 const translations = {
   fr: {
     "hero.title":"Vendre n’a jamais été aussi simple, malgré les kilomètres.",
@@ -128,7 +130,7 @@ const translations = {
     "about.title":"À propos",
     "about.text":"SelMiles est un service 3PL (logistique tierce partie) basé en France; aidant les e-commerçants et fournisseurs locaux et internationaux à gérer le stockage, la préparation et l’expédition de leurs produits vers la France et l’Europe.",
     "about.mention":"SelMiles est un service 3PL fondé par Selma SAIDI, entrepreneuse basée en France.", 
-    "partners.title":"Nos Partenaires", // Texte corrigé
+    "partners.title":"Partenaires", // Texte corrigé
     "partners.text":"SelMiles est fière de collaborer avec des leaders de la logistique.", 
     "services.title":"Services",
     "services.receive.front":"<span class='card-icon'>✅</span> Réception & contrôle des marchandises",
@@ -148,10 +150,10 @@ const translations = {
     "contact.title":"Contact",
     "contact.email_text":"✉️ Envoyer un email", 
     "contact.send_button": "Envoyer",
-    // NOUVELLES TRADUCTIONS POUR LES PLACEHOLDERS
     "contact.name_placeholder": "Nom",
     "contact.email_placeholder": "Email",
-    "contact.message_placeholder": "Votre question ou type de produits, volume, destinations..."
+    "contact.message_placeholder": "Votre question ou type de produits, volume, destinations...",
+    "contact.success_message": "Merci ! Votre message a été envoyé." // NOUVEAU
   },
   en: {
     "hero.title":"SELling made simple — no matter the Miles.", 
@@ -160,7 +162,7 @@ const translations = {
     "about.title":"About",
     "about.text":"SelMiles is a 3PL (Third Party Logistics) service based in France- aiming to help e-commerce sellers and international suppliers manage storage, fulfillment, and shipping to France and Europe.",
     "about.mention":"SelMiles is a 3PL founded by Selma SAIDI, a woman entrepreneur based in France.",
-    "partners.title":"Our Partners", // Texte corrigé
+    "partners.title":"Partners", // Texte corrigé
     "partners.text":"SelMiles proudly partners with logistics leaders.", 
     "services.title":"Services",
     "services.receive.front":"<span class='card-icon'>✅</span> Receiving & Quality Check",
@@ -180,10 +182,10 @@ const translations = {
     "contact.title":"Contact",
     "contact.email_text":"✉️ Send an email", 
     "contact.send_button": "Send",
-    // NOUVELLES TRADUCTIONS POUR LES PLACEHOLDERS
     "contact.name_placeholder": "Name",
     "contact.email_placeholder": "Email",
-    "contact.message_placeholder": "Your question, product type, volume, destinations..."
+    "contact.message_placeholder": "Your question, product type, volume, destinations...",
+    "contact.success_message": "Thank you! Your message has been sent." // NOUVEAU
   },
   cn: {
     "hero.title":"销售从未如此简单，无惧万里之遥。", 
@@ -192,7 +194,7 @@ const translations = {
     "about.title":"关于",
     "about.text":"SelMiles 是一家位于法国的第三方物流 (3PL) 服务，帮助电商卖家和国际供应商管理仓储、订单履行和向法国及欧洲的运输。",
     "about.mention":"SelMiles 是由 Selma SAIDI 创立的 3PL，公司由女性企业家拥有，总部位于法国。",
-    "partners.title":"我们的合作伙伴", // Texte corrigé
+    "partners.title":"合作伙伴", // Texte corrigé
     "partners.text":"SelMiles 很荣幸能与物流领军企业合作。", 
     "services.title":"服务",
     "services.receive.front":"<span class='card-icon'>✅</span> 收货及质检",
@@ -212,28 +214,31 @@ const translations = {
     "contact.title":"联系",
     "contact.email_text":"✉️ 发送邮件", 
     "contact.send_button": "发送",
-    // NOUVELLES TRADUCTIONS POUR LES PLACEHOLDERS
-    "contact.name_placeholder": "名称", // Nom
-    "contact.email_placeholder": "电子邮件", // Email
-    "contact.message_placeholder": "您的问题、产品类型、容量、目的地..." // Votre question...
+    "contact.name_placeholder": "名称", 
+    "contact.email_placeholder": "电子邮件", 
+    "contact.message_placeholder": "您的问题、产品类型、容量、目的地...",
+    "contact.success_message": "谢谢！您的邮件已发送成功。" // NOUVEAU
   }
 };
 
 function applyLang(lang){
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key = el.getAttribute('data-i18n');
-    if (!key.includes('.back') && translations[lang] && translations[lang][key]) {
-         el.innerHTML = translations[lang][key];
-    }
-  });
-  document.querySelectorAll('.card-flip-back').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if(translations[lang] && translations[lang][key]) {
-          el.innerHTML = translations[lang][key];
-      }
-  });
+    currentLang = lang; // Mise à jour de la langue actuelle
+    
+    // Traduction des contenus textuels
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if (!key.includes('.back') && translations[lang] && translations[lang][key]) {
+             el.innerHTML = translations[lang][key];
+        }
+    });
+    document.querySelectorAll('.card-flip-back').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if(translations[lang] && translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
 
-    // AJOUT: Mise à jour des placeholders
+    // Traduction des placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
         if (translations[lang] && translations[lang][key]) {
@@ -241,11 +246,20 @@ function applyLang(lang){
         }
     });
 
-  document.querySelector('.btn-primary').textContent = translations[lang]["hero.cta"];
-  document.querySelector('.btn-primary-submit').textContent = translations[lang]["contact.send_button"];
-  document.querySelector('.email-link span').innerHTML = translations[lang]["contact.email_text"]; 
-  localStorage.setItem('lang', lang);
+    document.querySelector('.btn-primary').textContent = translations[lang]["hero.cta"];
+    document.querySelector('.btn-primary-submit').textContent = translations[lang]["contact.send_button"];
+    document.querySelector('.email-link span').innerHTML = translations[lang]["contact.email_text"]; 
+    localStorage.setItem('lang', lang);
 }
+
+// Nouvelle fonction pour gérer la soumission et l'alerte traduite
+function submitForm() {
+    const message = translations[currentLang]["contact.success_message"];
+    alert(message);
+    // (Note : Si vous utilisez un système d'envoi de formulaire réel plus tard, 
+    // l'action d'envoi sera ajoutée ici.)
+}
+
 applyLang(localStorage.getItem('lang') || 'fr');
 
 // Rendre les cartes de service retournables au clic/focus/survol
